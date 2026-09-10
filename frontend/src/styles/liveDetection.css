@@ -1,0 +1,403 @@
+.live-page {
+  padding: 70px 40px;
+  min-height: 650px;
+}
+
+.live-container {
+  max-width: 1240px;
+  margin: auto;
+}
+
+/* =========================
+   PAGE HEADING
+========================= */
+
+.page-heading {
+  margin-bottom: 35px;
+}
+
+.page-heading h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.page-heading p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.live-grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+
+/* =========================
+   RECORD CARD
+========================= */
+
+.record-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  padding: 45px 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  min-height: 460px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+
+/* =========================
+   RECORD LOGO BUTTON
+========================= */
+
+.record-logo-button {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  /* optional */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 4px 15px rgba(26, 63, 224, 0.15);
+  /* subtle glow to look like a button */
+  overflow: hidden;
+}
+
+.record-logo-button:hover {
+  transform: scale(1.05);
+}
+
+.record-logo-button.recording {
+  box-shadow: 0 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+.record-logo-img,
+.record-logo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  image-rendering: auto;
+  /* explicit smoothing */
+  /* If the logo itself needs less sharpness */
+  filter: blur(0px);
+}
+
+
+
+/* =========================
+   TEXT
+========================= */
+
+.record-card h3 {
+  font-size: 17px;
+
+  margin-bottom: 8px;
+
+  color: #1f2937;
+}
+
+
+.connection {
+  font-size: 14px;
+
+  color: #e14b62;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   MINI WAVEFORM
+========================= */
+
+.mini-waveform {
+  width: 100%;
+
+  height: 110px;
+
+  background: #f8fafc;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 20px;
+
+  margin-bottom: 30px;
+}
+
+
+.mini-wave-bar {
+  width: 4px;
+
+  height: 30px;
+
+  background: #e14b62;
+
+  border-radius: 5px;
+}
+
+
+.mini-wave-bar:nth-child(2n) {
+  height: 50px;
+}
+
+.mini-wave-bar:nth-child(3n) {
+  height: 70px;
+}
+
+.mini-wave-bar:nth-child(4n) {
+  height: 40px;
+}
+
+.mini-wave-bar:nth-child(5n) {
+  height: 60px;
+}
+
+
+/* =========================
+   REPORT BUTTON
+========================= */
+
+.report-btn {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #1f2937;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+
+.report-btn:hover {
+  background: #111827;
+}
+
+
+/* =========================
+   REAL TIME MONITOR
+========================= */
+
+.monitor-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  padding: 36px;
+
+  min-height: 425px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+
+.monitor-card h2 {
+  font-size: 18px;
+
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   MONITOR STATS
+========================= */
+
+.monitor-stats {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+
+.monitor-stats span {
+  display: block;
+
+  font-size: 12px;
+
+  color: #9ca3af;
+
+  margin-bottom: 7px;
+
+  font-weight: 500;
+}
+
+
+.monitor-stats h3 {
+  font-size: 22px;
+
+  color: #1f2937;
+}
+
+
+.monitor-card hr {
+  border: none;
+
+  border-top: 1px solid #e5e7eb;
+
+  margin: 25px 0;
+}
+
+
+/* =========================
+   LIVE PROBABILITY
+========================= */
+
+.monitor-card h4 {
+  font-size: 13px;
+
+  color: #4b5563;
+
+  margin-bottom: 18px;
+}
+
+
+.probability-labels {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.human-text {
+  color: #168c68;
+}
+
+
+.ai-text {
+  color: #e14b62;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.probability-bar {
+  width: 100%;
+
+  height: 12px;
+
+  background: #e5e7eb;
+
+  border-radius: 5px;
+
+  overflow: hidden;
+
+  display: flex;
+}
+
+
+.human-bar {
+  width: 87%;
+
+  background: #22a07b;
+}
+
+
+.ai-bar {
+  width: 13%;
+
+  background: #ef4762;
+}
+
+
+/* =========================
+   SYSTEM LOG
+========================= */
+
+.system-log p {
+  font-size: 13px;
+
+  color: #9ca3af;
+
+  margin-bottom: 10px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .live-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .live-page {
+    padding: 40px 20px;
+  }
+
+  .monitor-card {
+    padding: 25px;
+  }
+
+  .record-card {
+    padding: 35px 25px;
+  }
+
+}
