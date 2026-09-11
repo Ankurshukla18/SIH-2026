@@ -1,0 +1,80 @@
+/* ──────────────────────────────
+   LANDING PAGE
+────────────────────────────── */
+
+.landing-page {
+  width: 100%;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.landing-page.landing-fade-out {
+  opacity: 0;
+}
+
+
+/* ──────────────────────────────
+   LOGO VIDEO
+────────────────────────────── */
+
+.landing-logo-video-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: logoFadeIn 0.6s ease-out both;
+}
+
+.landing-logo-video {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 20px;
+
+  /* GPU acceleration for crisp, smooth playback */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform;
+
+  /* Prevent any browser blurring - removed for smoother scaling */
+}
+
+
+/* ──────────────────────────────
+   ENTRANCE ANIMATION
+────────────────────────────── */
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateZ(0) scale(0.88);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateZ(0) scale(1);
+  }
+}
+
+
+/* ──────────────────────────────
+   RESPONSIVE
+────────────────────────────── */
+
+@media (max-width: 600px) {
+  .landing-logo-video {
+    width: 140px;
+    height: 140px;
+    border-radius: 16px;
+  }
+}
